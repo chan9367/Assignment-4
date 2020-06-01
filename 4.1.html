@@ -7,10 +7,16 @@
   <body>
     <script>
       function button1IsRight(){
+
+        if(document.getElementById("button2p").innerText == "")
         document.getElementById("button1p").innerText = "I'm right";
+        else document.getElementById("button1p").innerText = "No, I'm right"
       }
-      function button2IsRight(){
-        document.getElementById("button2p").innerText = "No, I'm right";
+       function button2IsRight(){
+
+        if(document.getElementById("button1p").innerText == "")
+        document.getElementById("button2p").innerText = "I'm right";
+        else document.getElementById("button2p").innerText = "No, I'm right"
       }
     </script>
     <div id="buttons">
