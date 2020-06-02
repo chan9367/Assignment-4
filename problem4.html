@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Form PW Check</title>
+    <link rel="stylesheet" href="styling1.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["pass"].value;
+            if (x != "12345678") {
+                alert("wrong username or password");
+                return false;
+            }
+            else 
+            x = document.getElementsByTagName("body");
+            x[0].innerText = "Correct!"
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Please submit 12345678 for password</h1>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()">
+        Name: <input type="text" placeholder="username" name="usrname">
+        Password: <input type="text" placeholder="Password" name="pass">
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+
+</html>
